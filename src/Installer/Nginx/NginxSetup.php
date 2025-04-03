@@ -35,7 +35,7 @@ class NginxSetup extends BaseInstaller
 
         if ($ssl == 'yes') {
             $this->process([
-                "certbot --redirect --nginx -n --agree-tos --email=$email  -d $fqdn -d www.$fqdn --rsa-key-size 2048",
+                "certbot certonly --dns-cloudflare --dns-cloudflare-credentials /root/.secrets/certbot/cloudflare.ini --dns-cloudflare-propagation-seconds 15 --email $email --agree-tos --no-eff-email -d $fqdn -d www.$fqdn --rsa-key-size 2048",
             ]);
         }
 
