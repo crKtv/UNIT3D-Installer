@@ -48,7 +48,7 @@ add_pkgs() {
     # PHP
     echo -e "\n$Cyan Installing PHP ... $Color_Off"
 
-    apt-get -qq install curl php-pear php8.3-common php8.3-cli php8.3-fpm php8.3-{redis,bcmath,curl,dev,gd,igbinary,intl,mbstring,mysql,opcache,readline,xml,zip} > /dev/null
+    apt-get -qq install curl php-pear php8.4-common php8.4-cli php8.4-fpm php8.4-{redis,bcmath,curl,dev,gd,igbinary,intl,mbstring,mysql,opcache,readline,xml,zip} > /dev/null
     check $? "Installing PHP Failed!"
 
     echo -e "$IGreen OK $Color_Off"
